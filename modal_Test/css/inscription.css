@@ -1,0 +1,169 @@
+
+
+.container_1
+{
+    width: 98vw;
+    /* height: 92vh;    */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: start; 
+    padding: 0em 6em;
+    /* border: 1px solid black; */
+}
+
+.container_1 > .inscription
+{
+    width: 22.8em;
+    height: 12.5em;
+    margin-top: 10em;
+    margin-right: 6em;
+    /* border: 1px solid black; */
+}
+
+.inscription > h1
+{
+    font-size: 1.9em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.inscription > p
+{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+
+/*Premier formulaire*/
+
+.step_1
+{
+    /* top: 50%; */
+    /* left: 50%; */
+    width: 28%;
+    min-width: 300px;
+    padding: 24px;
+    margin-top: 40px;
+    background: white;
+    border-radius: 1em;
+    padding-bottom: 2em;
+    position: relative;
+    box-sizing: content-box;
+    /* border: 1px solid black; */
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+.step_1 .img_logo
+{
+    height: 8em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+
+.step_1 .champs
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    /* border: 1px solid black; */
+}
+
+.step_1 label
+{
+    left: 1em;
+    font-weight: 300;
+    font-size: 0.8em;
+    position: relative;
+    margin-bottom: 0.2em;
+}
+
+.step_1 input, .step_1 .m_pass
+{
+    width: 94%;
+    height: 4em;
+    margin: auto;
+    outline: none;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom:1em;
+    border-radius: 10px;
+    background: rgba(162, 162, 162, 0.1);
+    border: 1px solid var(--m_blue);
+}
+
+.step_1 .m_pass
+{
+    padding: 0;
+    border: none;
+    position: relative;
+}
+
+.step_1 .m_pass input
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.m_pass > .hide_img
+{
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    position: absolute;
+    transform: translate(0, -50%);
+}
+
+
+
+.step_1 .buttons
+{
+    height: 5em;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+
+.buttons button
+{
+    width: 45%;
+    height: 80%;
+    border: none;
+    font-size: 2.8em;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.buttons > .annuler
+{
+    background: #676767;
+}
+
+.buttons > .envoyer
+{
+    background: var(--m_blue);
+}
+
+
+
+
+/*###############################################################################################################*/
+
+
+
+
+

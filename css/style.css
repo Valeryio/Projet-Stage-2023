@@ -1,0 +1,18 @@
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_h
+{
+    display: flex;
+    justify-content: center;
+}
+
+.flex_v
+{
+    display: flex;
+    align-items: center;
+}

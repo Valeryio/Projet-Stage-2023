@@ -1,0 +1,210 @@
+
+.background_band
+{
+    padding: 32px;
+}
+
+
+main
+{
+    max-width: 100vw;
+    height: 80vh;
+    padding: 4em;
+    font-size: 1em;
+}
+
+main h1
+{
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 32px;
+    transition: font-size ease-in 800ms;
+}
+
+main p
+{
+    margin-bottom: 2em;
+}
+
+main div
+{
+    margin-bottom: 12px;
+}
+
+
+main p, main div
+{
+    font-size: 1.25em;
+    font-weight: 200;
+    transition: font-size ease-in 800ms;
+}
+
+main div span
+{
+    font-weight: 500;
+}
+
+
+.div_2
+{
+    margin-bottom: 3em;
+}
+
+
+
+button
+{
+    width: 196px;
+    height: 88px;
+    outline: none;
+    border: 1px;
+    cursor: pointer;
+    margin-left: 4px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+button:first-of-type + button
+{
+    margin-left: 1.5em;
+}
+
+
+
+button a
+{
+    color: var(--m_blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.img_div
+{
+    left: 50%;
+    width: 30%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.img_div img
+{
+    width: 272px;
+    height: auto;
+}
+
+
+
+@media only screen and (max-width: 900px)
+{
+    main
+    {
+        font-size: 12px;
+    }
+
+    button
+    {
+        left: 50%;
+        margin: 0;
+        width: 112px;
+        height: 64px;
+        outline: none;
+        margin-right: 48px;
+        margin-top: 32px;
+        font-size: 1.25em;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        background: white;
+    }
+
+
+    button a
+    {
+        color: var(--m_blue_light);
+    }
+
+
+    button:first-of-type + button
+    {
+        margin: 0;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 390px)
+{
+    main
+    {
+        font-size: 10px;
+        padding: 4em 4em 0 4em;
+    }
+    
+    
+    .background_band
+    {
+        height: 60%;
+        clip-path: none;
+        background: linear-gradient(to bottom, var(--m_blue), var(--m_blue_light));
+    }
+
+    button
+    {
+        left: 50%;
+        margin: 0;
+        width: 112px;
+        height: 64px;
+        outline: none;
+        margin-top: 32px;
+        font-size: 1.25em;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        position: relative;
+        transform: translate(-50%, 0);
+        background: linear-gradient(to bottom right, var(--m_blue), var(--m_blue_light));
+    }
+
+
+    button a
+    {
+        color: white;
+    }
+
+
+    button:first-of-type + button
+    {
+        margin: 0;
+    }
+
+
+    .img_div
+    {
+        left: 50%;
+        width: 30%;
+        bottom: 0;
+        height: 80px;
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        transform: translate(-50%, 0%);
+    }
+
+    .img_div img
+    {
+        width: 64px;
+        height: auto;
+    }
+
+
+
+}

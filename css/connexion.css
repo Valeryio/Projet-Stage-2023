@@ -1,0 +1,177 @@
+
+
+
+/*Début du troisième formulaire*/
+
+.container_3
+{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6em 6em;
+    justify-content: start;
+    /* border: 2px solid violet; */
+}
+
+.container_3 > .connexion
+{
+    width: 22.8em;
+    height: 12.5em;
+    min-width: 20em;
+    margin: 2em 4em 2em 0;
+    /* bordeR: 1px solid black; */
+}
+
+.connexion > h1
+{
+    font-size: 1.9em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.connexion > p
+{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.step_3
+{
+    padding: 24px;
+    width: 21.88em;
+    height: 31.25em;
+    min-width: 20em;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+.step_3 .img_logo
+{
+    height: 20%;
+    display: flex;
+    margin-bottom: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.step_3 .champs
+{
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.step_3 input, .step_3 .m_pass
+{
+    width: 94%;
+    height: 30%;
+    margin: auto;
+    outline: none;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    background: rgba(162, 162, 162, 0.1);
+    border: 1px solid var(--m_blue);
+}
+
+.step_3 .m_pass
+{
+    padding: 0;
+    border: none;
+    position: relative;
+}
+
+.step_3 .m_pass label
+{
+    font-size: 8px;
+}
+
+.step_3 .m_pass input
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.m_pass > .hide_img
+{
+    top: 50%;
+    width: 1.5em;
+    right: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(0, -50%);
+}
+
+
+
+.step_3 .buttons
+{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.step_3 .buttons button
+{
+    width: 9.75em;
+    height: 4em;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.buttons > .annuler
+{
+    background: #676767;
+}
+
+.step_3 .buttons > .connex
+{
+    background: var(--m_blue);
+}
+
+
+
+
+@media only screen and (max-width: 250px)
+{
+
+    body
+    {
+        font-size: 10px;
+    }
+
+    .container_3
+    {
+        padding: 8em 0em;
+    }
+    
+
+    .step_3
+    {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .step_3 .img_logo
+    {
+        min-height: 5%;
+    }
+
+}
