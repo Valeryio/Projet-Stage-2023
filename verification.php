@@ -58,7 +58,7 @@
 
     </div>  
 
-
+    <div class="timer"> That is the time! </div>
 
     <script src="js/config.js" ></script>
     <script src="js/script.js" ></script>

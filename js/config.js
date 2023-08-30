@@ -8,8 +8,8 @@ let container_3 = document.querySelector(".container_3");
 
 // Récupération du formulaire d'inscription
 
-// let form_1 = document.querySelector(".container_1 .step_1");
-// console.log(form_1);
+let form_1 = document.querySelector(".container_1 .step_1");
+console.log(form_1);
 
 
 // Mise en place des variables de vérification
