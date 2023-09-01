@@ -4,7 +4,7 @@
  * Ceci est le fichier de traitement de toutes les informations reçues de l'utilisateur
  */
 
-include("connexion.php");
+include("connexionBDD.php");
 
 
 if (isset($_POST['inscription']))

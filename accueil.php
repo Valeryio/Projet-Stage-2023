@@ -103,6 +103,11 @@
         </div>
 
 
+        <div class="profil">
+            <img src="images/profile.svg" alt="">
+        </div>
+
+
         <h2 class="forfait" >Forfait actuel</h2>
 
         <div class="table_border">

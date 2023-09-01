@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION))
+    {
+        echo "Vous n'avez aucun accès à cette page!";
+        die;
+    }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +50,7 @@
 
         </div>
 
-        <form class="step_3"  action="#" method="" >
+        <form class="step_3"  action="php/connexion.php" method="post" >
 
             <div class="img_logo" > <img src="images/logo.svg" alt="icone logo" > </div>
 

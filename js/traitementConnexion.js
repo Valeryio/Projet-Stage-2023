@@ -28,7 +28,7 @@ mail_connexion.addEventListener("change", (event) =>
     {
         labelMailConnexion.style.color = "#ff1a40";
         mail_connexion.style.border = "2px solid #ff1a40";
-        labelMailConnexion.innerHTML = "Entrez une majuscule, une minuscule, une lettre et un symbole";
+        labelMailConnexion.innerHTML = "Entrez mail valide !";
 
     }
 
