@@ -214,6 +214,79 @@ body
 }
 
 
+/*Mise à jour de la table historique*/
+
+
+.dark_background
+{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* display: none; */
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark_background .historic
+{
+    overflow: hidden;
+    border-radius: 1em;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: var(--m_blue);
+}
+
+.dark_background table
+{
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.dark_background table thead
+{
+    font-weight: 500;
+}
+
+.dark_background table td
+{
+    width: 12em;
+    height: 4em;
+    padding: 1em;
+    border-width: 2px;
+    text-align: center;
+    border-style: solid;
+    border-radius: inherit;
+    border-color: var(--m_blue);
+}
+
+.dark_background table .end_date
+{
+    color: var(--m_red);
+}
+
+
+/*Classe génériques*/
+
+.display_state_none
+{
+    display: none;
+}
+
+
+.display_state_flex
+{
+    display: flex;
+}
+
+
+
+
+
+
 @media screen and (min-width: 1000px) {
 
     .profil

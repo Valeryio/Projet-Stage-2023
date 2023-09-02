@@ -157,13 +157,42 @@
 
 
         <div class="parameters">
-           <a href=""> <button><img src="images/Group 1.svg" title="paramètres" alt="paramètres buttons"></button></a>
+           <a href="" class="historic_button" > <button><img src="images/Group 1.svg" title="paramètres" alt="paramètres buttons"></button></a>
         </div>
 
         <div class="deconnexion">
            <a href="php/deconnexion.php"> <button><img src="images/power off.svg" title="déconnexion" alt="deconnexion button"></button></a> 
         </div>
 
+
+        <!--Historic Div-->
+
+        <div class="dark_background display_state_non ">
+
+            <div class="historic">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Date de début</td>
+                            <td>Date de fin</td>
+                            <td>Type d'abonnement</td>
+                            <td>Statut</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>01/07/23</td>
+                            <td>01/08/23</td>
+                            <td>4 Go</td>
+                            <td class="end_date" > Terminé </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            
+        </div>
 
         <script src="js/monModalJs.js" ></script>
 
