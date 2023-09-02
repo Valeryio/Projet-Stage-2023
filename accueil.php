@@ -1,3 +1,16 @@
+<?php
+
+    session_start();
+    
+    if(!isset($_SESSION['nom']))
+    {
+        echo "Vous n'avez aucun accès à cette page!";
+        die;
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +117,11 @@
 
 
         <div class="profil">
-            <img src="images/profile.svg" alt="">
+            <img src="images/profil.svg" alt="photo de profil">
+            
+            <div><?=$_SESSION['nom'] . " " . $_SESSION['prenom']?></div>
+            <div><strong>Date inscription : </strong><?=$_SESSION['date_inscription']?> </div>
+            <div><strong>Date actuelle : </strong><?=date("Y-m-d")?> </div>
         </div>
 
 
@@ -140,13 +157,15 @@
 
 
         <div class="parameters">
-            <a href="#"><img src="images/Group 1.svg" title="paramètres" alt="paramètres buttons"></a>
+           <a href=""> <button><img src="images/Group 1.svg" title="paramètres" alt="paramètres buttons"></button></a>
         </div>
 
         <div class="deconnexion">
-            <a href="index.php"><img src="images/power off.svg" title="déconnexion" alt="deconnexion button"></a>
+           <a href="php/deconnexion.php"> <button><img src="images/power off.svg" title="déconnexion" alt="deconnexion button"></button></a> 
         </div>
 
+
+        <script src="js/monModalJs.js" ></script>
 
     </body>
 

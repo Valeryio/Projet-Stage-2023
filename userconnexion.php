@@ -1,15 +1,6 @@
 <?php
 
     session_start();
-
-    if(!isset($_SESSION))
-    {
-        echo "Vous n'avez aucun accès à cette page!";
-        die;
-    }
-
-
-
 ?>
 
 

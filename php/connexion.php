@@ -34,6 +34,7 @@ if(isset($_POST['mail']) && isset($_POST['password']))
         $_SESSION['nom'] = $userData['nom'];
         $_SESSION['prenom'] = $userData['prenom'];
         $_SESSION['mail'] = $userData['mail'];
+        $_SESSION['date_inscription'] = $userData['date_inscription'];
 
         header('Location: ../accueil.php');
 
