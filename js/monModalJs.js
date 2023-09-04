@@ -3,7 +3,6 @@
 
 let historic_div = document.querySelector(".dark_background");
 console.log(historic_div);
-//historic_div.classList.add("display_state_none");
 
 
 // - Récupération du bouton de l'historique
@@ -11,12 +10,10 @@ console.log(historic_div);
 let historic_button = document.querySelector(".historic_button");
 console.log(historic_button);
 
-current_style = getComputedStyle(historic_div).display;
-console.log(current_style);
 
+// - Mise en place de l'événement sur le bouton des paramètres
 
 historic_button.addEventListener("click", show_historic());
-
 function show_historic()
 {
         historic_div.classList.remove("display_state_none");
@@ -25,7 +22,7 @@ function show_historic()
 
 
 
-
+// - Mise en place de l'événement de fermeture sur la fenêtre d'abonnement
 
 function close_historic()
 {

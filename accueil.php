@@ -4,7 +4,7 @@
     
     if(!isset($_SESSION['nom']))
     {
-        echo "Vous n'avez aucun accès à cette page!";
+        header('Location: unauthorised.php');
         die;
     }
 
