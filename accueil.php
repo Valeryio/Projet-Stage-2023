@@ -7,6 +7,10 @@
         header('Location: unauthorised.php');
         die;
     }
+    else
+    {
+        include("php/connexionBDD.php");
+    }
 
 ?>
 
@@ -169,6 +173,40 @@
 
         <div class="dark_background display_state_non ">
 
+
+            <?php
+            
+            /**
+             * Mise en place du système d'affichage de l'historique
+             * 
+             * Description: 
+             * Le code ci-dessous, est utilsé pour obtenir les informations de la table
+             * historique, afin de pouvoir les afficher dans le modal des historiques de
+             * l'utilisateur.
+             * 
+             * Une inclusion est faite au début : En effet, cette dernière permet de mettre à
+             * jour la table historique avant que la moindre action ne soit effectuée
+             * 
+            */
+
+            include('php/MajStatut.php');
+
+
+            $historique_query = $db->prepare("SELECT historique.date_debut_abonnement AS date_debut, historique.date_fin_abonnement AS date_fin, offres.quantite AS Type, historique.statut AS statut
+            FROM historique
+            INNER JOIN utilisateurs ON historique.id_utilisateurs=utilisateurs.id
+            INNER JOIN offres ON historique.id_offre=offres.id
+            WHERE historique.id_utilisateurs = :id");
+
+            $historique_query->execute(
+                ['id' => $_SESSION['id']]
+            );
+
+            // - Stockage de toutes les données relatives au abonnement de l'utilisateur dans un tableau de tableaux associatifs
+            $historique = $historique_query->fetchAll();
+            
+            ?>
+
             <div class="historic">
                 <table>
                     <thead>
@@ -181,16 +219,48 @@
                     </thead>
 
                     <tbody>
+
+                            <?php
+                                // - Affichage de toutes les transactions effectuées !
+
+                                foreach($historique as $abonnement):
+                            ?>
+
                         <tr>
-                            <td>01/07/23</td>
-                            <td>01/08/23</td>
-                            <td>4 Go</td>
-                            <td class="end_date" > Terminé </td>
+                            <td>
+                                <?php
+
+                                    // - Nous recevons la date en format de datetime, nous devons donc la convertir en date simple
+                                    echo datetimeToDate($abonnement['date_debut']);
+                                
+                                ?>
+                            </td>
+
+                            <td>
+                                <?php
+
+                                    // - Nous recevons la date en format de datetime, nous devons donc la convertir en date simple
+                                    echo datetimeToDate($abonnement['date_fin']);
+                                
+                                ?>
+                            </td>
+
+                            <td><?=$abonnement['Type']?></td>
+                            <td class="end_date" > <?=$abonnement['statut']?> </td>
                         </tr>
+
+                            <?php
+
+                                endforeach;
+
+                            ?>
+
                     </tbody>
 
                 </table>
             </div>
+
+
             
         </div>
 

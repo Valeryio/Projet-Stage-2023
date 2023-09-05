@@ -20,7 +20,7 @@ if (isset($_POST['inscription']))
     echo "Le mot de passe ".$password;
 
     // Insertion des données dans la base
-    $queryInsertion = $db->prepare("INSERT INTO users(nom, prenom, mail, password, date_inscription) VALUES (:nom, :prenom, :mail, :password, :date_inscription) ");
+    $queryInsertion = $db->prepare("INSERT INTO utilisateurs(nom, prenom, mail, password, date_inscription) VALUES (:nom, :prenom, :mail, :password, :date_inscription) ");
 
     $queryInsertion->execute(
         [

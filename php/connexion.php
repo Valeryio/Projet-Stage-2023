@@ -12,7 +12,7 @@ if(isset($_POST['mail']) && isset($_POST['password']))
 
     // - Récupération des données nécessaires de la table utilisateur
 
-    $query = $db->prepare("SELECT * FROM users WHERE mail=:mail");
+    $query = $db->prepare("SELECT * FROM utilisateurs WHERE mail=:mail");
     $query->execute(
         [
             'mail' => $mail
@@ -31,6 +31,7 @@ if(isset($_POST['mail']) && isset($_POST['password']))
 
         session_start();
 
+        $_SESSION['id'] = $userData['id'];
         $_SESSION['nom'] = $userData['nom'];
         $_SESSION['prenom'] = $userData['prenom'];
         $_SESSION['mail'] = $userData['mail'];
