@@ -1,5 +1,15 @@
 
-// - Récupération de la box de l'historic
+/**
+ * @todo - Il faut régler le problème lié à la chronologie de déclenchement des évenements.
+ * Les paramètres s'affichent dès la connexion, même quand l'on a pas besoin d'eux. Et cela 
+ * reste toujours le cas lors de la connexion.
+ * Il faudrait prendre le soin d'arrêter le comportement par défaut de cette machine et afficher ce
+ * dernier seulement quand on en a besoin.
+ */
+
+
+
+// - Récupération de la box de l'historique
 
 let historic_div = document.querySelector(".dark_background");
 console.log(historic_div);

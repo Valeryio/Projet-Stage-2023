@@ -1,2 +1,10 @@
 
 1 - Tester le système de connexion pour s'assurer qu'il fonctionne correctement>
+
+2 - La date de fin de l'abonnement enregistrée dans la base de données peut se retrouver à
+être inférieure à celle du début de l'abonnement.
+
+3 - Il faut travailler sur la quantité de données qui a déjà été utilisée, et celle qui ne l'a
+pas encore été, pour afficher un cadran cohérent.
+
+4 - On ne peut souscrire qu'à un seul abonnement à la fois

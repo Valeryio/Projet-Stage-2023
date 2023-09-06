@@ -54,10 +54,15 @@
 
             <div class="ligne">
 
+                <?php
+                    // - Réception de la valeur de statut sous forme de tableau associatif
+                    $statut_1 = updateStatut($_SESSION['id'], 1);
+                ?>
+
                 <div class="cellule">1 Go</div>
                 <div class="cellule">1 semaine</div>
                 <div class="cellule">750 Fcfa</div>
-                <div class="cellule">En cours...</div>
+                <div class="cellule"><?=$statut_1['statut']?></div>
                 <div class="cellule">
                     <button> <a href="#" >S'abonner</a> </button>
                 </div>
@@ -71,10 +76,14 @@
             
             <div class="ligne">
 
+                <?php                
+                    $statut_2 = updateStatut($_SESSION['id'], 2);
+                ?>
+
                 <div class="cellule">2 Go</div>
                 <div class="cellule">2 semaines</div>
                 <div class="cellule">1500 Fcfa</div>
-                <div class="cellule">Non actif</div>
+                <div class="cellule"><?=$statut_2['statut']?></div>
                 <div class="cellule">
                     <button> <a href="#" >S'abonner</a> </button>
                 </div>
@@ -88,10 +97,14 @@
             
             <div class="ligne">
 
+                <?php                    
+                    $statut_3 = updateStatut($_SESSION['id'], 3);
+                ?>
+
                 <div class="cellule">3 Go</div>
                 <div class="cellule">3 semaine</div>
                 <div class="cellule">2250 Fcfa</div>
-                <div class="cellule">Non actif</div>
+                <div class="cellule"><?=$statut_3['statut']?></div>
                 <div class="cellule">
                     <button> <a href="#" >S'abonner</a> </button>
                 </div>
@@ -104,10 +117,14 @@
             
             <div class="ligne">
 
+                <?php                    
+                    $statut_4 = updateStatut($_SESSION['id'], 4);
+                ?>
+
                 <div class="cellule">4 Go</div>
                 <div class="cellule">1 mois</div>
                 <div class="cellule">3000 Fcfa</div>
-                <div class="cellule">Non actif</div>
+                <div class="cellule"><?=$statut_4['statut']?></div>
                 <div class="cellule">
                     <button> <a href="#" >S'abonner</a> </button>
                 </div>
@@ -134,6 +151,21 @@
         <div class="table_border">
             <table class="abonnement_actif" >
 
+                <?php
+                    // - Ici, il a fallu utiliser une requête imbriquée, avec jointure pour déterminer le dernier abonnement du client en cours
+                    $statutQuery = $db->prepare('SELECT historique.date_debut_abonnement, historique.date_fin_abonnement, offres.quantite
+                                                    FROM historique INNER JOIN offres ON offres.id = historique.id_offre
+                                                    WHERE date_debut_abonnement = (SELECT MAX(date_debut_abonnement) 
+                                                                                    FROM historique WHERE id_utilisateurs = :id_utilisateurs)');
+
+                    $statutQuery->execute(
+                        [
+                            'id_utilisateurs' => $_SESSION['id']
+                        ]);
+                
+                    $statutResult = $statutQuery->fetch();
+                ?>
+
                 <thead>
                     <tr>
                         <td> Date de début</td>
@@ -146,11 +178,11 @@
     
                 <tbody>
                     <tr>
-                        <td>01/07/23</td>
-                        <td  class="end_date">01/08/23</td>
-                        <td>4 Go</td>
-                        <td>3.8 Go</td>
-                        <td class="right_cell" >0.2 Go</td>
+                        <td><?=datetimeToDate($statutResult['date_debut_abonnement'])?></td>
+                        <td  class="end_date"><?=datetimeToDate($statutResult['date_fin_abonnement'])?></td>
+                        <td><?=$statutResult['quantite']?></td>
+                        <td> - - </td>
+                        <td class="right_cell" > - - </td>
                     </tr>
                 </tbody>
     
