@@ -8,3 +8,5 @@
 pas encore été, pour afficher un cadran cohérent.
 
 4 - On ne peut souscrire qu'à un seul abonnement à la fois
+
+5 - Le problème de connexion

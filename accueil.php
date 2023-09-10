@@ -64,7 +64,7 @@
                 <div class="cellule">750 Fcfa</div>
                 <div class="cellule"><?=$statut_1['statut']?></div>
                 <div class="cellule">
-                    <button> <a href="#" >S'abonner</a> </button>
+                <a href="php/Rules.php" ><button>S'abonner </button></a>
                 </div>
 
             </div>
@@ -85,7 +85,7 @@
                 <div class="cellule">1500 Fcfa</div>
                 <div class="cellule"><?=$statut_2['statut']?></div>
                 <div class="cellule">
-                    <button> <a href="#" >S'abonner</a> </button>
+                <a href="php/Rules.php" ><button>S'abonner </button></a>
                 </div>
 
             </div>
@@ -106,7 +106,7 @@
                 <div class="cellule">2250 Fcfa</div>
                 <div class="cellule"><?=$statut_3['statut']?></div>
                 <div class="cellule">
-                    <button> <a href="#" >S'abonner</a> </button>
+                <a href="php/Rules.php" ><button>S'abonner </button></a>
                 </div>
 
             </div>
@@ -126,7 +126,7 @@
                 <div class="cellule">3000 Fcfa</div>
                 <div class="cellule"><?=$statut_4['statut']?></div>
                 <div class="cellule">
-                    <button> <a href="#" >S'abonner</a> </button>
+                <a href="php/Rules.php" > <button> S'abonner </button> </a>
                 </div>
 
             </div>
